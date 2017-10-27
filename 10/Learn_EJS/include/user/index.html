@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    @@include('../../templates/header.html',{"name":"大明"})
+    <p>用户中心</p>
+    @@loop("../../templates/loop.html", "data.json")
+    @@include('../../templates/footer.html')
+</body>
+</html>
