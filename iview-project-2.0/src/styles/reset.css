@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+img {
+  vertical-align: middle;
+}
+body {
+  font-size: 18px;
+}
+small {
+  font-size: 14px;
+}
+h4 {
+  font-size: 24px;
+}
+.clearfix {
+  display: block;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.w-1195 {
+  max-width: 1195px;
+  margin: 0 auto;
+}
