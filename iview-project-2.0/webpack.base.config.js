@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -12,6 +12,7 @@ module.exports = {
         path: path.join(__dirname, './dist')
     },
     plugins: [
+        new CleanWebpackPlugin(['dist']),
        new webpack.ProvidePlugin({
            $:"jquery",
            jQuery:"jquery"
@@ -70,7 +71,7 @@ module.exports = {
             },
             {
                 test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
-                loader: 'url-loader?limit=1024'
+                loader: 'url-loader?limit=1024&name=assets/[hash:8].[name].[ext]\''
             },
             {
                 test: /\.(html|tpl)$/,
